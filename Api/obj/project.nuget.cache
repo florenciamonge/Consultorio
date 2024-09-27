@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fdgh+f8mdF2Ai14X+g/HywGDlQvlcuskLWz1GvaEUQ/xfGlh2BBwDqN2gJwN87eJDzI/gqSQ9YQ/qdQ95jJINQ==",
+  "dgSpecHash": "PA87671AWhtyxsV4O4zx3zeqAHenP7jluPBMCXnoNgwtv1ucmxBhELotlqzMvjSMtULeiDS7rNhhCmEptoxCrg==",
   "success": true,
   "projectFilePath": "C:\\dev\\NET+REACT\\Consultorio\\Api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Southern Horizon\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Southern Horizon\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\Southern Horizon\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Southern Horizon\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Southern Horizon\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.1\\microsoft.aspnetcore.openapi.8.0.1.nupkg.sha512",
     "C:\\Users\\Southern Horizon\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
