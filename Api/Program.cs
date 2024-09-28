@@ -2,7 +2,6 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using Serilog.Events;
 using Backend;
 using Backend.DTOs;
 using Backend.Interfaces;
@@ -12,6 +11,13 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
 
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+Log.Information("Starting web host - Consultorio Backend");
+Log.Information("Environment: {Environment}", Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"));
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,17 +52,14 @@ try
             .EnableSensitiveDataLogging()
             .EnableDetailedErrors()
     );
-    
-    //DbContext
+
     builder.Services.AddTransient<DBContext>();
-    
-    //Services
+
     builder.Services.AddScoped<IEnvironmentService, EnvironmentService>();
     builder.Services.AddScoped<IAuthService, AuthService>();
     builder.Services.AddScoped<IUserService, UserService>();
     builder.Services.AddScoped<IPatientService, PatientService>();
-
-    //Validators
+   
     builder.Services.AddScoped<IValidator<AuthInputDTO>, AuthInputDTO.Validate>();
     builder.Services.AddScoped<IValidator<AuthForgotInputDTO>, AuthForgotInputDTO.Validate>();
     builder.Services.AddScoped<IValidator<AuthTokenInputDTO>, AuthTokenInputDTO.Validate>();
@@ -64,32 +67,7 @@ try
     builder.Services.AddScoped<IValidator<AuthUserInputDTO>, AuthUserInputDTO.Validate>();
     builder.Services.AddScoped<IValidator<UserInputDTO>, UserInputDTO.Validate>();
     builder.Services.AddScoped<IValidator<PatientInputDTO>, PatientInputDTO.Validate>();
-   
-    //Helpers
-    Auth.Configuration = builder.Configuration.GetSection("Auth");
 
-    var secret = builder.Configuration.GetSection("Auth").GetSection("Key");
-    var key = Encoding.ASCII.GetBytes(secret.Value!);
-    builder.Services
-        .AddHttpContextAccessor()
-        .AddAuthorization()
-        .AddAuthentication(x =>
-            {
-                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-                .AddJwtBearer(x =>
-                {
-                    x.RequireHttpsMetadata = false;
-                    x.SaveToken = true;
-                    x.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(key),
-                        ValidateIssuer = false,
-                        ValidateAudience = false
-                    };
-                });
 
     builder.Services
         .AddFluentValidationAutoValidation()
@@ -109,6 +87,8 @@ try
                 .AllowCredentials()
         );
     });
+
+    builder.Services.AddSignalR();
 
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
