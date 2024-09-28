@@ -22,3 +22,31 @@ VALUES('Camilo','Aufranc','CAufranc','1237','Cami@hotmail.com',@statusUsuarioId,
 INSERT INTO [dbo].[User]([Name],[Surname],[Username],[Password],[Email],[StatusId],[Administrative],[Doctor],[CreatedAt],[UpdatedAt],[Deleted],[CreatedUserID],[UpdatedUserID])
 VALUES('Ignacio','Ceballos','ICeballos','1238','Nacho@hotmail.com',@statusUsuarioId,'true','false',0,0,'false',0,0);
 
+-- PACIENTE
+
+-- Declaración de la variable para el estado
+DECLARE @statusPatientId INT;
+
+-- Obteniendo el StatusId de PropertyValue.
+SELECT @statusPatientId = PropertyValueId FROM PropertyValue 
+WHERE PropertyCode = 'patientStatus' AND Code = 'patientStatusEnAtención';
+
+INSERT INTO [dbo].[Patient]([Name],[Surname],[Phone],[Email],[StatusId],[HealthInsurance],[CreatedAt],[UpdatedAt],[Deleted],[CreatedUserID],[UpdatedUserID],[DNI])
+VALUES('Micaela','Lopez','12334344','null',@statusPatientId,'false',0,0,'False',0,0,'12377778');
+
+-- Obteniendo el StatusId de PropertyValue.
+SELECT @statusPatientId = PropertyValueId FROM PropertyValue 
+WHERE PropertyCode = 'patientStatus' AND Code = 'patientStatusEnAtención';
+
+INSERT INTO [dbo].[Patient]([Name],[Surname],[Phone],[Email],[StatusId],[HealthInsurance],[CreatedAt],[UpdatedAt],[Deleted],[CreatedUserID],[UpdatedUserID],[DNI])
+VALUES('Valentina','Muñiz','123666','null',@statusPatientId,'false',0,0,'False',0,0,'1555678');
+
+-- Obteniendo el StatusId de PropertyValue.
+SELECT @statusPatientId = PropertyValueId FROM PropertyValue 
+WHERE PropertyCode = 'patientStatus' AND Code = 'patientStatusDeAlta';
+
+INSERT INTO [dbo].[Patient]([Name],[Surname],[Phone],[Email],[StatusId],[HealthInsurance],[CreatedAt],[UpdatedAt],[Deleted],[CreatedUserID],[UpdatedUserID],[DNI])
+VALUES('Santiago','Ortiz','7733445','null',@statusPatientId,'true',0,0,'False',0,0,'18845678');
+
+
+
