@@ -16,7 +16,7 @@ namespace Backend
             PropertyValue = Set<PropertyValue>();
             Token = Set<Token>();
             User = Set<User>();
-            Pickup = Set<Patient>();
+            Patient = Set<Patient>();
             
         }
 
@@ -35,7 +35,7 @@ namespace Backend
         public DbSet<PropertyValue> PropertyValue { get; set; }
         public DbSet<Token> Token { get; set; }
         public DbSet<User> User { get; set; }
-        public DbSet<Patient> Pickup { get; set; }
+        public DbSet<Patient> Patient { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
