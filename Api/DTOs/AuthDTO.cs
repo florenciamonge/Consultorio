@@ -149,8 +149,6 @@ namespace Backend.DTOs
 
         public string StatusText { get; set; }
 
-        public long? LastConnection { get; set; }
-
         public TokenOutputDTO? TokenOutputDTO { get; set; }
     }
 }

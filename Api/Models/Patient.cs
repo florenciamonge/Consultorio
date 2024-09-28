@@ -9,6 +9,7 @@ namespace Backend.Models
         {
             Name = string.Empty;
             Surname = string.Empty;
+            DNI = string.Empty;
             Phone = string.Empty;
             Email = string.Empty;
             StatusId = 0;
@@ -20,6 +21,9 @@ namespace Backend.Models
 
         [Required]
         public string Surname { get; set; }
+
+        [Required]
+        public string DNI { get; set; }
         
         [Required]
         public string Phone { get; set; }

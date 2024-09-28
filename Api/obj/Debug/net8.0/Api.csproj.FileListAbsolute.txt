@@ -141,3 +141,8 @@ C:\dev\NET+REACT\Consultorio\Api\obj\Debug\net8.0\ref\Api.dll
 C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\FluentValidation.dll
 C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\Serilog.dll
+C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\Serilog.Sinks.Console.dll

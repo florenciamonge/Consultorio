@@ -8,12 +8,14 @@ namespace Backend.DTOs
         public PatientInputDTO()
         {
             Name = string.Empty;
+            DNI = string.Empty;
             
         }
 
 
         public long Id { get; set; }
         public string Name { get; set; }
+        public string DNI { get; set; }
        
 
         public class Validate : AbstractValidator<PatientInputDTO>
