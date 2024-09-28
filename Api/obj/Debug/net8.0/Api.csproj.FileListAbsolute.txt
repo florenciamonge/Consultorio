@@ -138,3 +138,6 @@ C:\dev\NET+REACT\Consultorio\Api\obj\Debug\net8.0\refint\Api.dll
 C:\dev\NET+REACT\Consultorio\Api\obj\Debug\net8.0\Api.pdb
 C:\dev\NET+REACT\Consultorio\Api\obj\Debug\net8.0\Api.genruntimeconfig.cache
 C:\dev\NET+REACT\Consultorio\Api\obj\Debug\net8.0\ref\Api.dll
+C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\FluentValidation.dll
+C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\Serilog.dll
