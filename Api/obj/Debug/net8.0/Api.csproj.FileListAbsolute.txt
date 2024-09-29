@@ -146,3 +146,4 @@ C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\FluentValidation.DependencyInj
 C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
 C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\dev\NET+REACT\Consultorio\Api\bin\Debug\net8.0\Serilog.Sinks.File.dll
