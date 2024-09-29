@@ -68,7 +68,7 @@ type AlternativeUrls = {
     qParams?: QueryParams; // Los queryParams son ahora opcionales para mayor flexibilidad
   };
 };
-type AccessoryUrls = {
+type PatientUrls = {
   [key: string]: {
     relativePath: string;
     qParams?: QueryParams; // Los queryParams son ahora opcionales para mayor flexibilidad
@@ -98,12 +98,12 @@ type WorkOrderUrls = {
     qParams?: QueryParams; // Los queryParams son ahora opcionales para mayor flexibilidad
   };
 };
-/* Accessory */
-export const AccessoryUrls: AccessoryUrls = {
-  all: { relativePath: "Accessory/all" },
-  list: { relativePath: "Accessory/list" },
+/* Patient */
+export const PatientUrls: PatientUrls = {
+  all: { relativePath: "Patient/all" },
+  list: { relativePath: "Patient/list" },
   filtering: {
-    relativePath: "Accessory/filtering",
+    relativePath: "Patient/filtering",
     qParams: { search: "search" },
   },
   // ... otros endpoints

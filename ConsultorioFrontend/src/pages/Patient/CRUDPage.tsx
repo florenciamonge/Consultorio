@@ -14,7 +14,7 @@ import {
 import {
   APIResponse,
   APIURL,
-  AccessoryUrls,
+  PatientUrls,
   QueryParams,
 } from "../../utils/constants/api/api.constants";
 import {
@@ -74,13 +74,13 @@ const PatientPage = () => {
 
   const url = useMemo(() => {
     if (searchTerm) {
-      const searchUrl = AccessoryUrls.filtering; // Acceso a la propiedad en minúsculas
+      const searchUrl = PatientUrls.filtering; // Acceso a la propiedad en minúsculas
       const relativePath = searchUrl.relativePath;
       const queryParams: QueryParams = searchUrl.qParams || {}; // queryParams ahora es opcional, inicializado como un objeto vacío si no existe
       queryParams.search = searchTerm;
       return buildUrl(APIURL, relativePath, queryParams);
     } else {
-      const allUrl = AccessoryUrls.all; // Acceso a la propiedad en minúsculas
+      const allUrl = PatientUrls.all; // Acceso a la propiedad en minúsculas
       const relativePath = allUrl.relativePath;
       return buildUrl(APIURL, relativePath);
     }
