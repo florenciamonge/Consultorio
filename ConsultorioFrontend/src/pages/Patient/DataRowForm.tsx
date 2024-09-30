@@ -40,23 +40,25 @@ import {
   handleApiError,
   isAPIResponse,
 } from "../../utils/constants/errors-handler.constants";
-import { activeOptions } from "../../utils/constants/selectValues.constants";
+/* import { activeOptions } from "../../utils/constants/selectValues.constants"; */
 
 import { FormSchema } from "./constants/fieldSchema.constants";
-import Divider from '../../../layout/Header/Divider';
+
 import { ModalGeneric } from '../../componets/Modal/ModalGeneric';
 import { showAlertExitConfirm, customAlert, showToast } from '../../utils/sweetAlert.utils';
-import { getEnviromentOptions, EnviromentKeys, APIEnviroments } from '../../utils/enviroment.utils';
+/* import { getEnviromentOptions, EnviromentKeys, APIEnviroments } from '../../utils/enviroment.utils'; */
 import { createPatient, updatePatient } from './Service/patient.service';
 import { getChangedFields, getChangedData } from '../../utils/getChangesFiels';
 import LoadImage from '../../componets/Inputs/LoadImage/loadImage';
-import SelectGroup from '../../componets/Inputs/Select/Select';
+/* import SelectGroup from '../../componets/Inputs/Select/Select'; */
 import useUploadImage from '../../hooks/userUploadImage.hook';
 import {
   PostPatient,
   PutPatient,
   TypeActions,
 } from "./interfaces/patient.interface";
+import { APIEnviroments } from "../../utils/enviroment.utils";
+import Divider from "../../layout/Header/Divider";
 
 
 export type FormData = PutPatient | PostPatient;
@@ -86,7 +88,7 @@ const DataRowForm: React.FC<Props> = ({
     reset,
     setValue,
     watch,
-    control,
+  /*   control, */
     formState: { errors, isDirty, defaultValues, isSubmitting, dirtyFields },
   } = useForm<FormData>({
     resolver: yupResolver(schema as ObjectSchema<FormData>),

@@ -10,7 +10,7 @@ import axios from "axios";
 export const APIURL =
   import.meta.env.VITE_MODE === "production"
     ? import.meta.env.VITE_API_URL
-    : "https://localhost:7300";
+    : "http://localhost:5260";
 
 
 export const api = axios.create({

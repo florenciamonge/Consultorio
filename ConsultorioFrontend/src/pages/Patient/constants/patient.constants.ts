@@ -11,11 +11,11 @@ export const patientColumnsAndLabelTexts = {
   /* Table Columns Headers */
   HEADER_ID: "#",
   HEADER_NAME: "Nombre",
-  HEADER_IMAGE: "Imagen",
-  HEADER_CODE: "Código",
-  HEADER_MARKET: "Mercado",
-  HEADER_DESCRIPTION: "Descripción",
-  HEADER_STATE: "Estado",
+  HEADER_SURNAME: "Apellido",
+  HEADER_DNI: "DNI",
+  HEADER_EMAIL: "Email",
+  HEADER_HEALTHINSURANCE: "Cobertura",
+  HEADER_STATUS: "Estado",
   HEADER_ACTIONS: "Acciones",
 };
 

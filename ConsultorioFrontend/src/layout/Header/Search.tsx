@@ -4,7 +4,7 @@ import { Button, Form, InputGroup } from "react-bootstrap";
 import styled from "styled-components";
 
 import React from "react";
-import { theme, v } from '../../src/styles';
+import { theme, v } from '../../styles';
 
 const SearchInputStyles = styled.div`
   .search-container {

@@ -38,7 +38,12 @@ export const v = {
 };
 
 export const PageContainer = styled.div`
+
   height: 100%;
+  min-width:1200px;
+  margin: 0 auto;
+  width:100%;
+  place-content: center;
   background: ${({ theme }) => theme.bg};
   color: ${({ theme }) => theme.text};
   padding: ${v.mdSpacing} ${v.lgSpacing};

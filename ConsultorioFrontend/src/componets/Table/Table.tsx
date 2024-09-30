@@ -17,8 +17,9 @@ import { useAuthStore } from "../../store/auth";
 import { v } from "../../styles";
 import { textPaginator } from "../../utils/constants/globalText.constants";
 
-import Divider from '../../../layout/Header/Divider';
+
 import GenericDropDown from '../Dropdown/Dropdown';
+import Divider from "../../layout/Header/Divider";
 
 interface Props {
   columns: any;
